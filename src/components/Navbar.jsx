@@ -89,7 +89,7 @@ const Navbar = () => {
         </div>
 
         {toggle && (
-          <div className="absolute top-0 right-0 flex flex-col gap-4 bg-white w-1/2 h-screen">
+          <div className="fixed top-0 right-0 flex flex-col gap-4 bg-white w-1/2 h-screen">
             <div className="absolute top-5 right-6">
               <IoClose
                 className="h-12 w-12 text-black"
