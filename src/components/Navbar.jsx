@@ -105,7 +105,7 @@ const Navbar = () => {
                 >
                   <div className="flex flex-row items-center gap-2">
                     <FontAwesomeIcon icon={link.icon} className="w-7 h-7" />
-                    <li className="text-black text-2xl font-semibold">
+                    <li className="text-black text-xl font-semibold">
                       {link.name}
                     </li>
                   </div>
@@ -116,12 +116,12 @@ const Navbar = () => {
             <div className="mt-10 flex flex-col gap-4 justify-center items-center">
               <div className="flex flex-row gap-4 items-center">
                 <LuLogIn className="w-4 h-4" />
-                <button className="text-gray-700 font-semibold text-2xl">
+                <button className="text-gray-700 font-semibold text-xl">
                   Login
                 </button>
               </div>
 
-              <button className="rounded-xl bg-black text-white text-center text-2xl w-max px-5 py-3">
+              <button className="rounded-xl bg-black text-white text-center text-xl w-max px-5 py-3">
                 Join Now
               </button>
             </div>
