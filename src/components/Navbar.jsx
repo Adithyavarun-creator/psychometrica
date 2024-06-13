@@ -35,7 +35,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="sm:py-6 md:py-6 lg:py-8 flex flex-row justify-between items-center">
-        <div className="flex items-center sm:gap-4 md:gap-6 2xl:gap-6 cursor-pointer">
+        <div className="flex items-center sm:gap-4 md:gap-6 xl:gap-8 cursor-pointer">
           <div>
             <Logo />
           </div>
