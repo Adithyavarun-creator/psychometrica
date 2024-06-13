@@ -11,7 +11,7 @@ import { faNewspaper } from "@fortawesome/free-solid-svg-icons/faNewspaper";
 import { LuLogIn } from "react-icons/lu";
 
 const Navbar = () => {
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(true);
 
   const navLinks = [
     {
@@ -92,20 +92,20 @@ const Navbar = () => {
           <div className="absolute top-0 right-0 flex flex-col gap-4 bg-white w-1/2 h-screen">
             <div className="absolute top-5 right-6">
               <IoClose
-                className="h-10 w-10 text-black"
+                className="h-12 w-12 text-black"
                 onClick={() => setToggle(false)}
               />
             </div>
 
-            <div className="mt-20 mb-5">
+            <div className="mt-32">
               {navLinks.map((link, i) => (
                 <ul
                   key={i}
-                  className="p-2 flex flex-col gap-2 justify-center items-center"
+                  className="p-2 flex flex-col gap-4 justify-center items-center"
                 >
-                  <div className="flex flex-row items-center gap-4">
-                    <FontAwesomeIcon icon={link.icon} className="w-4 h-4" />
-                    <li className="text-black text-sm font-semibold">
+                  <div className="flex flex-row items-center gap-2">
+                    <FontAwesomeIcon icon={link.icon} className="w-7 h-7" />
+                    <li className="text-black text-2xl font-semibold">
                       {link.name}
                     </li>
                   </div>
@@ -113,15 +113,15 @@ const Navbar = () => {
               ))}
             </div>
 
-            <div className="flex flex-col gap-2 justify-center items-center">
+            <div className="mt-10 flex flex-col gap-4 justify-center items-center">
               <div className="flex flex-row gap-4 items-center">
                 <LuLogIn className="w-4 h-4" />
-                <button className="text-gray-700 font-semibold text-sm">
+                <button className="text-gray-700 font-semibold text-2xl">
                   Login
                 </button>
               </div>
 
-              <button className="rounded-xl bg-black text-white text-center text-sm w-max px-3 py-2">
+              <button className="rounded-xl bg-black text-white text-center text-2xl w-max px-5 py-3">
                 Join Now
               </button>
             </div>
