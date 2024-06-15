@@ -5,13 +5,13 @@ import MobileLogo from "./MobileLogo";
 import { IoClose } from "react-icons/io5";
 import { TbBrandSpeedtest } from "react-icons/tb";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookOpen, faVials } from "@fortawesome/free-solid-svg-icons";
+import { faBookOpen, faUser, faVials } from "@fortawesome/free-solid-svg-icons";
 import { faPeopleGroup } from "@fortawesome/free-solid-svg-icons/faPeopleGroup";
 import { faNewspaper } from "@fortawesome/free-solid-svg-icons/faNewspaper";
 import { LuLogIn } from "react-icons/lu";
 
 const Navbar = () => {
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
 
   const navLinks = [
     {
@@ -29,6 +29,25 @@ const Navbar = () => {
     {
       name: "Articles",
       icon: faNewspaper,
+    },
+  ];
+
+  const mobNavLinks = [
+    {
+      name: "Test",
+      icon: faVials,
+    },
+    {
+      name: "Courses",
+      icon: faBookOpen,
+    },
+    {
+      name: "Communities",
+      icon: faPeopleGroup,
+    },
+    {
+      name: "Profile",
+      icon: faUser,
     },
   ];
 
@@ -59,15 +78,15 @@ const Navbar = () => {
         </div>
 
         <div className="hidden sm:flex flex-row items-center gap-4 md:gap-6 2xl:gap-8 cursor-pointer">
-          <div className="flex flex-row gap-2 items-center">
-            <LuLogIn className="hidden md:block md:w-8 md:h-8" />
+          <div className="flex flex-col justify-center items-center">
+            <LuLogIn className="hidden md:block md:w-5 md:h-5" />
             <button className="text-gray-700 font-semibold text-sm md:text-[16px] 2xl:text-3xl">
               Login
             </button>
           </div>
 
           <button
-            className="rounded-xl bg-black text-white text-center md:px-5 md:py-2 2xl:px-7 2xl:py-4 text-sm md:text-[16px] 2xl:text-3xl
+            className="rounded-xl bg-black text-white text-center md:px-5 md:py-2 2xl:px-7 2xl:py-4 text-sm md:text-[13px] 2xl:text-3xl
         sm:text-sm sm:px-3 sm:py-2"
           >
             Join Now
@@ -75,7 +94,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      <nav className="relative z-10 sm:hidden">
+      {/* <nav className="relative z-10 sm:hidden">
         <div className="flex justify-between items-center p-6">
           <div>
             <MobileLogo toggle={toggle} />
@@ -127,6 +146,20 @@ const Navbar = () => {
             </div>
           </div>
         )}
+      </nav> */}
+
+      <nav className="z-10 sm:hidden flex flex-row justify-between items-center p-6">
+        <div>
+          <MobileLogo mobSize />
+        </div>
+        <div className="flex flex-row gap-2">
+          {mobNavLinks.map((link, i) => (
+            <ul key={i} className="flex flex-col justify-center items-center">
+              <FontAwesomeIcon icon={link.icon} className="h-3 w-3" />
+              <li className="text-[8px]">{link.name}</li>
+            </ul>
+          ))}
+        </div>
       </nav>
     </>
   );

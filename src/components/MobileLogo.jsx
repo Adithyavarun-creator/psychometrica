@@ -1,6 +1,6 @@
 import React from "react";
 
-const MobileLogo = ({ toggle }) => {
+const MobileLogo = ({ toggle, mobSize }) => {
   return (
     <>
       <svg
@@ -11,7 +11,7 @@ const MobileLogo = ({ toggle }) => {
         className={`${
           toggle
             ? "blur-sm w-[150px] sm:hidden text-white opacity-80 invert"
-            : "w-[150px] sm:hidden text-white opacity-80 invert"
+            : "w-[100px] sm:hidden text-white opacity-80 invert"
         }`}
       >
         <path
